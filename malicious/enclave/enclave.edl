@@ -1,0 +1,12 @@
+enclave {
+	from "sgx_tstdc.edl" import *;
+
+	trusted {
+		public char * ecall_get_key();
+		public char * ecall_get_iv();
+	};
+	
+	untrusted {
+		// no ocall
+	};
+};
